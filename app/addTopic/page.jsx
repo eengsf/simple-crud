@@ -17,7 +17,7 @@ export default function addTopic() {
          return;
       }
       try {
-         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics`, {
+         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api`, {
             method: "POST",
             headers: {
                "Content-type": "application/json"
