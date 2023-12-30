@@ -17,13 +17,14 @@ export default function addTopic() {
          return;
       }
       try {
-         const res = await fetch("http://localhost:3000/api/topics", {
+         const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/topics`, {
             method: "POST",
             headers: {
                "Content-type": "application/json"
             },
             body: JSON.stringify({ title, description }),
          });
+
          if (res.ok) {
             router.push('/');
          } else {
